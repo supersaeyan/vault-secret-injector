@@ -1,0 +1,5 @@
+Pipfile*
+*.pyc
+__PYCACHE__/
+*venv*
+.idea/
