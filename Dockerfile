@@ -4,9 +4,11 @@ RUN pip --default-timeout=1000 install --upgrade pip
 
 RUN pip install pipenv
 
-COPY ./requirements.txt /api/requirements.txt
+COPY ./Pipfile ./
 
-RUN pipenv install -r /api/requirements.txt
+COPY ./Pipfile.lock ./
+
+RUN pipenv install --system --deploy
 
 COPY . /api
 
