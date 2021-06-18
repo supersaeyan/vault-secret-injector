@@ -21,3 +21,4 @@ if __name__ == '__main__':
         print("Secret injected successfully")
     except Exception as e:
         print(f"Secret injection failed. Exception: {e}")
+        exit(1)
